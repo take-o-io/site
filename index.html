@@ -44,7 +44,8 @@ a{color:inherit}
 @media (max-width:860px){.split{grid-template-columns:1fr;gap:36px;padding-top:8px;padding-bottom:8px}}
 
 .col-l{min-width:0}
-h1{font-weight:500;font-size:clamp(27px,3.3vw,42px);line-height:1.16;letter-spacing:-.015em}
+.eyebrow{font-family:'Courier New',Courier,monospace;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-soft)}
+h1{font-weight:500;font-size:clamp(27px,3.3vw,42px);line-height:1.16;letter-spacing:-.015em;margin-top:12px}
 .sub{margin-top:18px;font-size:clamp(14.5px,1.4vw,16.5px);line-height:1.6;color:var(--fg-soft);max-width:46ch}
 .cta-row{margin-top:28px;display:flex;gap:9px;flex-wrap:wrap;max-width:440px}
 .cta-row input{flex:1;min-width:200px;background:transparent;border:1px solid var(--ctl);border-radius:11px;padding:13px 15px;font:inherit;font-size:14.5px;color:var(--fg);outline:none;transition:border-color var(--t-fast) var(--ease)}
@@ -95,8 +96,8 @@ h1{font-weight:500;font-size:clamp(27px,3.3vw,42px);line-height:1.16;letter-spac
 
 @media (prefers-reduced-motion:no-preference){
   .col-l>*{opacity:0;transform:translateY(8px);animation:up .6s var(--ease) forwards}
-  .col-l>*:nth-child(2){animation-delay:.07s}.col-l>*:nth-child(3){animation-delay:.14s}
-  .col-l>*:nth-child(4){animation-delay:.21s}.col-l>*:nth-child(5){animation-delay:.21s}
+  .col-l>*:nth-child(3){animation-delay:.07s}.col-l>*:nth-child(4){animation-delay:.14s}
+  .col-l>*:nth-child(5){animation-delay:.21s}.col-l>*:nth-child(6){animation-delay:.21s}
   .viz-frame{opacity:0;animation:up-f .7s var(--ease) .28s forwards}
   @keyframes up{to{opacity:1;transform:none}}
   @keyframes up-f{to{opacity:1}}
@@ -171,6 +172,7 @@ body.cta-focus #waitlist input:focus{border-color:var(--fg);box-shadow:0 0 0 3px
 <div class="stage">
   <div class="split">
     <div class="col-l">
+      <p class="eyebrow" data-i="eyebrow"></p>
       <h1 data-i="h1"></h1>
       <p class="sub" data-i="sub"></p>
       <form class="cta-row" id="waitlist" novalidate>
@@ -243,9 +245,10 @@ body.cta-focus #waitlist input:focus{border-color:var(--fg);box-shadow:0 0 0 3px
 <script>
 const I18N = {
   en: {
+    eyebrow:"Production Intelligence",
     cta:"Join waitlist", ph:"your work email",
     h1:"From script to budget. Scene by scene, line by line. In minutes.",
-    sub:"With take-o.io, breakdown and technical analysis cover the entire script. Every scene, every element. Less time, less effort. More control over every decision, from page to set.",
+    sub:"take-o.io reads the full script and turns it into structured production data: every scene, every element, with early budget-risk visibility built in. Less time, less effort. More control over every decision, from page to set.",
     micro:"Early access by invitation · piloting with selected production companies",
     legal:"Privacy Notice",
     ok:"You're on the list. We'll be in touch when the next round of invitations opens.",
@@ -254,9 +257,10 @@ const I18N = {
     desc:"AI platform that turns screenplays into structured production data. Automatic script breakdown and technical analysis for production companies. Early access."
   },
   pt: {
+    eyebrow:"Inteligência de Produção",
     cta:"Entrar na lista", ph:"seu e-mail de trabalho",
     h1:"Do roteiro ao orçamento. Cena por cena, linha por linha. Em minutos.",
-    sub:"Com a take-o.io, a decupagem e a análise técnica cobrem o roteiro inteiro. Cada cena, cada elemento. Menos tempo, menos esforço. Mais controle sobre cada decisão, do papel ao set.",
+    sub:"A take-o.io lê o roteiro inteiro e transforma em dado estruturado de produção: cada cena, cada elemento, com visibilidade antecipada de risco orçamentário já embutida. Menos tempo, menos esforço. Mais controle sobre cada decisão, do papel ao set.",
     micro:"Acesso antecipado por convite · piloto com produtoras selecionadas",
     legal:"Aviso de Privacidade",
     ok:"Você está na lista. Entramos em contato quando abrir a próxima leva de convites.",
