@@ -3,3 +3,6 @@
 .env.local
 .env.*.local
 .vercel
+
+# Claude Code: permissões locais podem conter segredos de comandos aprovados
+.claude/settings.local.json
